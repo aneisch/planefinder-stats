@@ -11,4 +11,4 @@ while true; do
   curl --silent -XPOST "http://$INFLUX_HOST:$INFLUX_PORT/write?db=$INFLUX_DATABASE" --data-binary "mode_s_pps value=$mode_s_pps
   mode_ac_pps value=$mode_ac_pps"; 
   sleep 1; 
-  done
+done
