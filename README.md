@@ -1,8 +1,8 @@
 # planefinder-stats
 
-Query PlaneFinder client and store stats in InfluxDB
+Query [Plane Finder client](https://planefinder.net/sharing/client) and store stats in InfluxDB
 
-The following data is retrieved from the /ajax/stats endpoint of the planefinder client:
+The following data is retrieved from the /ajax/stats endpoint of the [Plane Finder client](https://planefinder.net/sharing/client):
 ```
 {
   "executable_start_time": 1581968285.019631,
@@ -39,3 +39,12 @@ The following data is retrieved from the /ajax/stats endpoint of the planefinder
   }
 }
 ```
+
+### Environmental Variables
+Variable | Default | Description
+-- | -- | --
+INFLUX_HOST | 10.0.1.22 | The server hosting influxdb
+INFLUX_PORT | 8086 | Influxdb HTTP port
+INFLUX_DATABASE | planefinder | Database which readings are written to
+PLANEFINDER_HOST | 10.0.1.8 | Host which is running PlaneFinder client
+PLANEFINDER_PORT | 80 | Web port of Plane Finder client
