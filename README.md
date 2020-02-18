@@ -40,7 +40,28 @@ The following data is retrieved from the /ajax/stats endpoint of the [Plane Find
 }
 ```
 
+### Example docker-compose:
+```yaml
+version: '3.2'
+services:
+    planefinder-stats:
+        container_name: planefinder-stats
+        image: aneisch/planefinder-stats
+        environment:
+          - INFLUX_HOST=192.168.1.5
+          - PLANEFINDER_HOST=192.168.1.55
+```
+
+### Example `docker run`:
+```bash
+docker run -d --name planefinder-stats -e INFLUX_HOST=192.168.1.5 \
+-e PLANEFINDER_HOST=192.168.1.55 \
+aneisch/planefinder-stats
+```
+
 ### Environmental Variables
+You only need to specify the environmental variables in `docker run` or your docker-compose file that you want/need to override:
+
 Variable | Default | Description
 -- | -- | --
 INFLUX_HOST | 10.0.1.22 | The server hosting influxdb
