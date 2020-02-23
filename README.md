@@ -69,3 +69,4 @@ INFLUX_PORT | 8086 | Influxdb HTTP port
 INFLUX_DATABASE | planefinder | Database which readings are written to
 PLANEFINDER_HOST | 10.0.1.8 | Host which is running PlaneFinder client
 PLANEFINDER_PORT | 80 | Web port of Plane Finder client
+INTERVAL | 1 | Sleep time between updates (seconds)
